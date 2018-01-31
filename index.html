@@ -5,56 +5,187 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="vendor/css/font-awesome.min.css">
+		<script type="text/javascript" src="vendor/css/tabs.js"></script>
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<div class="wrapper">
-			<div class="header">
-				<h2>Responsive Tab style menu UI</h2>
-			</div>
-			<div class="nav-tabs">
-				<label for="show-menu" class="show-menu">
-					<span class="toggle">
-						<div></div>
-						<div></div>
-						<div></div>
-					</span>
-				</label>
-				<input type="checkbox" id="show-menu" role="button">
-				<ul class="tabs" id="menu">
-					<li><a href="#Home"><b>Home</b></a></li>
-					<li><a href="#Tab1" class="active"><b>Tab 1</b></a></li>
-					<li><a href="#Tab2"><b>Tab 2</b></a></li>
-					<li><a href="#Tab3"><b>Tab 3</b></a></li>
-					<li><a href="#Tab4"><b>Tab 4</b></a></li>
-					<li><a href="#Tab5"><b>Tab 5</b></a></li>
-					<li><a href="#Tab6"><b>Tab 6</b></a></li>
-				</ul>
-			</div>
-			<div class="mobile-visible-head">
-				<h3 id="print-head">Tab1</h3>
-			</div>
-			<div class="container">
-				<div class="content-wrapper">
-					<div class="wrapper tabcontent" id="Tab">
-						<h3>Look at the twitter screen above. Do you think new users understand what they're supposed to 	do?
-						</h3>
-						<h4>Obviously they should start tweeting. However, the "Compose new tweet" button in the top right
-							corner isn't very clear(see law of clarity) and the input box on the left sidebar pretty much blends with the environment. From a design standpoint, it seems like twitter want users to either search for something or use one of the opetions from the left hand navigation menu, as those interface elements are most prominent.
-						</h4>
-						<div class="value">
-							<h5>Follow us on :</h5>
-							<ul class="footer-icons">
-								<div class="icon">
-									<a href="#"><i class="fa fa-facebook circle-icon" aria-hidden="true"></i></a>
-									<a href="#"><i class="fa fa-twitter circle-icon" aria-hidden="true"></i></a>
-									<a href="#"><i class="fa fa-google-plus circle-icon" aria-hidden="true"></i></a>
-								</div>
-							</ul>
-						</div>
-					</div>
-					<div class="clearfix"></div>
+		<div class="header">
+			<div class="heading-container">
+				<div class="heading">
+					<h2>Responsive Tab style menu UI</h2>
 				</div>
+			</div>
+		</div>
+		<div class="nav-tabs">
+			<label for="show-menu" class="show-menu">
+				<span class="toggle">
+					<div></div>
+					<div></div>
+					<div></div>
+				</span>
+			</label>
+			<input type="checkbox" id="show-menu" role="button">
+			<ul class="tabs" id="menu">
+				<li><a href="#" class="tablink" onclick="switchTab(event, 'Home')"><b>Home</b></a></li>
+				<li><a href="#" class="active tablink" onclick="switchTab(event, 'Tab1')"><b>Tab 1</b></a></li>
+				<li><a href="#" class="tablink" onclick="switchTab(event, 'Tab2')"><b>Tab 2</b></a></li>
+				<li><a href="#" class="tablink" onclick="switchTab(event, 'Tab3')"><b>Tab 3</b></a></li>
+				<li><a href="#" class="tablink" onclick="switchTab(event, 'Tab4')"><b>Tab 4</b></a></li>
+				<li><a href="#" class="tablink" onclick="switchTab(event, 'Tab5')"><b>Tab 5</b></a></li>
+				<li><a href="#" class="tablink" onclick="switchTab(event, 'Tab6')"><b>Tab 6</b></a></li>
+			</ul>
+		</div>
+		<div class="mobile-visible-head">
+			<h4 id="print-head">Tab1</h4>
+		</div>
+		<div class="container">
+			<div class="content-wrapper">
+				<div class="wrapper tabcontent" id="Tab1">
+					<h3>Look at the twitter screen above. Do you think new users understand what they're supposed to do?</h3>
+					<p>Obviously they should start tweeting. However, the "Compose new tweet" button in the top right
+						corner isn't very clear(see law of clarity) and the input box on the left sidebar pretty much blends
+						with the environment. From a design standpoint, it seems like twitter want users to either search for
+						something or use one of the opetions from the left hand navigation menu, as those interface elements are
+						most prominent.
+					</p>
+					<div class="row footer">
+						<p>Follow us on :</p>
+						<ul class="footer-icons">
+							<a href="#" class="follow-icon">
+								<span class="circle-transition"></span>
+								<i class="fa fa-facebook circle-icon" aria-hidden="true"></i>
+							</a>
+							<a href="#" class="follow-icon">
+								<span class="circle-transition"></span>
+								<i class="fa fa-twitter circle-icon" aria-hidden="true"></i>
+							</a>
+							<a href="#" class="follow-icon">
+								<i class="fa fa-google-plus circle-icon" aria-hidden="true" style="color: white;"></i>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="wrapper tabcontent" id="Home">
+					<h3>Look at the twitter screen above. Do you think new users understand what they're supposed to do?</h3>
+					<p>Home</p>
+					<div class="row footer">
+						<p>Follow us on :</p>
+						<ul class="footer-icons">
+							<a href="#" class="follow-icon">
+								<span class="circle-transition"></span>
+								<i class="fa fa-facebook circle-icon" aria-hidden="true"></i>
+							</a>
+							<a href="#" class="follow-icon">
+								<span class="circle-transition"></span>
+								<i class="fa fa-twitter circle-icon" aria-hidden="true"></i>
+							</a>
+							<a href="#" class="follow-icon">
+								<i class="fa fa-google-plus circle-icon" aria-hidden="true" style="color: white;"></i>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="wrapper tabcontent" id="Tab2">
+					<h3>Look at the twitter screen above. Do you think new users understand what they're supposed to do?</h3>
+					<p>Tab2</p>
+					<div class="row footer">
+						<p>Follow us on :</p>
+						<ul class="footer-icons">
+							<a href="#" class="follow-icon">
+								<span class="circle-transition"></span>
+								<i class="fa fa-facebook circle-icon" aria-hidden="true"></i>
+							</a>
+							<a href="#" class="follow-icon">
+								<span class="circle-transition"></span>
+								<i class="fa fa-twitter circle-icon" aria-hidden="true"></i>
+							</a>
+							<a href="#" class="follow-icon">
+								<i class="fa fa-google-plus circle-icon" aria-hidden="true" style="color: white;"></i>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="wrapper tabcontent" id="Tab3">
+					<h3>Look at the twitter screen above. Do you think new users understand what they're supposed to do?</h3>
+					<p>Tab3</p>
+					<div class="row footer">
+						<p>Follow us on :</p>
+						<ul class="footer-icons">
+							<a href="#" class="follow-icon">
+								<span class="circle-transition"></span>
+								<i class="fa fa-facebook circle-icon" aria-hidden="true"></i>
+							</a>
+							<a href="#" class="follow-icon">
+								<span class="circle-transition"></span>
+								<i class="fa fa-twitter circle-icon" aria-hidden="true"></i>
+							</a>
+							<a href="#" class="follow-icon">
+								<i class="fa fa-google-plus circle-icon" aria-hidden="true" style="color: white;"></i>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="wrapper tabcontent" id="Tab4">
+					<h3>Look at the twitter screen above. Do you think new users understand what they're supposed to do?</h3>
+					<p>Tab4</p>
+					<div class="row footer">
+						<p>Follow us on :</p>
+						<ul class="footer-icons">
+							<a href="#" class="follow-icon">
+								<span class="circle-transition"></span>
+								<i class="fa fa-facebook circle-icon" aria-hidden="true"></i>
+							</a>
+							<a href="#" class="follow-icon">
+								<span class="circle-transition"></span>
+								<i class="fa fa-twitter circle-icon" aria-hidden="true"></i>
+							</a>
+							<a href="#" class="follow-icon">
+								<i class="fa fa-google-plus circle-icon" aria-hidden="true" style="color: white;"></i>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="wrapper tabcontent" id="Tab5">
+					<h3>Look at the twitter screen above. Do you think new users understand what they're supposed to do?</h3>
+					<p>Tab5</p>
+					<div class="row footer">
+						<p>Follow us on :</p>
+						<ul class="footer-icons">
+							<a href="#" class="follow-icon">
+								<span class="circle-transition"></span>
+								<i class="fa fa-facebook circle-icon" aria-hidden="true"></i>
+							</a>
+							<a href="#" class="follow-icon">
+								<span class="circle-transition"></span>
+								<i class="fa fa-twitter circle-icon" aria-hidden="true"></i>
+							</a>
+							<a href="#" class="follow-icon">
+								<i class="fa fa-google-plus circle-icon" aria-hidden="true" style="color: white;"></i>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="wrapper tabcontent" id="Tab6">
+					<h3>Look at the twitter screen above. Do you think new users understand what they're supposed to do?</h3>
+					<p>Tab6</p>
+					<div class="row footer">
+						<p>Follow us on :</p>
+						<ul class="footer-icons">
+							<a href="#" class="follow-icon">
+								<span class="circle-transition"></span>
+								<i class="fa fa-facebook circle-icon" aria-hidden="true"></i>
+							</a>
+							<a href="#" class="follow-icon">
+								<span class="circle-transition"></span>
+								<i class="fa fa-twitter circle-icon" aria-hidden="true"></i>
+							</a>
+							<a href="#" class="follow-icon">
+								<i class="fa fa-google-plus circle-icon" aria-hidden="true" style="color: white;"></i>
+							</a>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"></div>
 			</div>
 		</div>
 	</body>
